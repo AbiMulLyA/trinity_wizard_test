@@ -16,6 +16,7 @@ dependencies:
   analyzer: ^6.4.1                               # A versatile package for efficient code analysis in Flutter projects.
   auto_route: ^8.2.0                             # A Flutter routing library that generates route code.
   cupertino_icons: ^1.0.6
+  calendar_date_picker2: ^1.0.3                  # A calendar date picker widget for selecting dates.
   connectivity_plus: ^6.0.3                      # Allows you to monitor network connectivity in Flutter.
   dartz: ^0.10.1                                 # A functional programming library for Dart.
   dio: ^5.4.3+1                                    # A powerful HTTP client for making network requests in Flutter.
@@ -26,6 +27,7 @@ dependencies:
   flutter_native_splash: ^2.4.0                  # Generate native splash screens for Flutter apps.
   flutter_bloc: ^8.1.6                           # Implements the BLoC pattern for state management in Flutter.
   freezed: ^2.5.2                                # Code generation for immutable classes in Dart/Flutter.
+  flutter_hooks: ^0.20.5                         # Flutter hooks for functional widget composition.
   freezed_annotation: ^2.4.1                     # Annotations for the Freezed library.
   fluttertoast: ^8.2.6                           # Show toast messages in your Flutter app.
   json_annotation: ^4.9.0                        # Code generation for JSON serialization/deserialization.

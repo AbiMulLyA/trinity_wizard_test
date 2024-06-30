@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../main.dart';
+import '../../module/presentation/ui/detail_contact_page.dart';
 
 part 'router.gr.dart';
 
@@ -18,6 +19,9 @@ class AppRouter extends _$AppRouter {
     AutoRoute(
       page: MainRoute.page,
       initial: true,
+    ),
+    AutoRoute(
+      page: DetailContactRoute.page,
     ),
   ];
 }
