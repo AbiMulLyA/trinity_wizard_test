@@ -10,19 +10,41 @@
 include: package:flutter_lints/flutter.yaml
 
 linter:
-  # The lint rules applied to this project can be customized in the
-  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
-  # included above or to enable additional rules. A list of all available lints
-  # and their documentation is published at https://dart.dev/lints.
-  #
-  # Instead of disabling a lint rule for the entire project in the
-  # section below, it can also be suppressed for a single line of code
-  # or a specific dart file by using the `// ignore: name_of_lint` and
-  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
-  # producing the lint.
   rules:
-    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
-    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    parameter_assignments: false
+    avoid_single_cascade_in_expression_statements: false
+    avoid_void_async: false
+    always_specify_types: false
+    sort_pub_dependencies: false
+    sort_constructors_first: false
+    avoid_redundant_argument_values: false
+    prefer_if_null_operators: true
+    prefer_null_aware_operators: true
+    avoid_bool_literals_in_conditional_expressions: false
+    depend_on_referenced_packages: false
+    require_trailing_commas: false
+    use_build_context_synchronously: false
+    prefer_inlined_adds: false
+    always_use_package_imports: false
+    no_leading_underscores_for_local_identifiers: false
+    use_decorated_box: false
+    use_colored_box: false
+    use_super_parameters: false
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/injection.config.dart"
+  errors:
+    parameter_assignments: error
+    missing_required_param: error
+    missing_return: error
+    argument_type_not_assignable: error
+    avoid_classes_with_only_static_members: ignore
+    no_runtimetype_tostring: ignore
+    avoid_dynamic_calls: ignore
+    invalid_annotation_target: ignore
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
