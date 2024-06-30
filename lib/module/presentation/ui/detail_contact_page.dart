@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
@@ -9,6 +12,7 @@ import 'package:trinity_wizard_test/core/utils/global_util.dart';
 import 'package:trinity_wizard_test/module/presentation/widget/form_widget.dart';
 
 import '../../../config/di/injector.dart';
+import '../cubit/contact_cubit.dart';
 
 @RoutePage()
 class DetailContactPage extends HookWidget {
@@ -67,7 +71,18 @@ class DetailContactPage extends HookWidget {
         ),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              context.read<ContactCubit>().addContact(
+                data: {
+                  "id": getRandomString(24),
+                  "firstName": _firstNameCtr.text,
+                  "lastName": _lastNameCtr.text,
+                  "email": _emailCtr.text,
+                  "dob": _dobCtr.text,
+                },
+              );
+              context.maybePop(true);
+            },
             child: const Center(
               child: Text(
                 'Save',
@@ -357,6 +372,20 @@ class DetailContactPage extends HookWidget {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  String getRandomString(int length) {
+    const _chars =
+        'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+    Random _rnd = Random();
+    return String.fromCharCodes(
+      Iterable.generate(
+        length,
+        (_) => _chars.codeUnitAt(
+          _rnd.nextInt(_chars.length),
         ),
       ),
     );

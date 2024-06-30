@@ -26,6 +26,7 @@ import 'core/utils/dio_interceptors_util.dart';
 import 'core/utils/error_util.dart';
 import 'core/utils/global_util.dart';
 import 'core/utils/lang_util.dart';
+import 'module/presentation/cubit/contact_cubit.dart';
 
 Future<void> mainApp(String env) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -124,6 +125,9 @@ class _AppState extends State<App> {
           BlocProvider(
             create: (_) => getIt<LangBloc>(),
           ),
+          BlocProvider(
+            create: (_) => getIt<ContactCubit>(),
+          )
         ],
         child: BlocBuilder<LangBloc, LangState>(
           builder: (

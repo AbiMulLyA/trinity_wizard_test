@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String dataData = 'assets/data/data.json';
   static const String iconsLauncherIcon = 'assets/icons/launcher_icon.png';
   static const String langEn = 'assets/lang/en.json';
   static const String langId = 'assets/lang/id.json';
