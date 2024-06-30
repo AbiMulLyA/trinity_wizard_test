@@ -12,6 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:trinity_wizard_test/module/presentation/ui/home_page.dart';
 
 import 'config/api/api.dart';
 import 'config/di/injector.dart';
@@ -208,7 +209,8 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const HomePage();
+/*    return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Template Widget'),
@@ -232,7 +234,7 @@ class _MainPageState extends State<MainPage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    );*/
   }
 }
 
